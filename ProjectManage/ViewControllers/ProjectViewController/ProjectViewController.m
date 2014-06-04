@@ -66,22 +66,25 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
    
-    static NSString *cellIdentifier = @"kCell";
-
-    TestTableViewCell *cell = [tableView
+    static NSString *cellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView
                              dequeueReusableCellWithIdentifier:cellIdentifier];
     
-//        cell.backgroundColor = [UIColor clearColor];
-//        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
-//        cell.textLabel.textColor = [UIColor blackColor];
-//        cell.textLabel.highlightedTextColor = [UIColor lightGrayColor];
-//        cell.selectedBackgroundView = [[UIView alloc] init];
-//    
-//    NSArray *titles = @[@"项目1", @"项目2",@"项目3"];
-//    NSArray *images = @[@"icon-menu-progress", @"icon-menu-progress",@"icon-menu-progress"];
-//    cell.textLabel.text = titles[indexPath.row];
-//   cell.imageView.image = [UIImage imageNamed:images[indexPath.row]];
-
+    if (cell ==nil) {
+       cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    
+        cell.backgroundColor = [UIColor clearColor];
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
+        cell.textLabel.textColor = [UIColor blackColor];
+        cell.textLabel.highlightedTextColor = [UIColor lightGrayColor];
+        cell.selectedBackgroundView = [[UIView alloc] init];
+    
+    NSArray *titles = @[@"项目1", @"项目2",@"项目3"];
+    NSArray *images = @[@"icon-menu-progress", @"icon-menu-progress",@"icon-menu-progress"];
+    cell.textLabel.text = titles[indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:images[indexPath.row]];
+    }
     
     return cell;
 }
