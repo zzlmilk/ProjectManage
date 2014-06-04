@@ -67,9 +67,12 @@
    
     static NSString *cellIdentifier = @"Cell";
 
+    
     UITableViewCell *cell = [tableView
                              dequeueReusableCellWithIdentifier:cellIdentifier];
     
+    if (cell ==nil) {
+       cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
@@ -81,7 +84,7 @@
     NSArray *images = @[@"icon-menu-progress", @"icon-menu-progress",@"icon-menu-progress"];
     cell.textLabel.text = titles[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:images[indexPath.row]];
-    
+    }
     
     return cell;
 }
