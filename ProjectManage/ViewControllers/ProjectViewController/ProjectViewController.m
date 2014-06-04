@@ -7,6 +7,7 @@
 //
 
 #import "ProjectViewController.h"
+#import "TestTableViewCell.h"
 
 @interface ProjectViewController ()
 
@@ -65,23 +66,22 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
    
-    static NSString *cellIdentifier = @"Cell";
+    static NSString *cellIdentifier = @"kCell";
 
-    UITableViewCell *cell = [tableView
+    TestTableViewCell *cell = [tableView
                              dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    
-        cell.backgroundColor = [UIColor clearColor];
-        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
-        cell.textLabel.textColor = [UIColor blackColor];
-        cell.textLabel.highlightedTextColor = [UIColor lightGrayColor];
-        cell.selectedBackgroundView = [[UIView alloc] init];
-    
-    NSArray *titles = @[@"项目1", @"项目2",@"项目3"];
-    NSArray *images = @[@"icon-menu-progress", @"icon-menu-progress",@"icon-menu-progress"];
-    cell.textLabel.text = titles[indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:images[indexPath.row]];
-    
+//        cell.backgroundColor = [UIColor clearColor];
+//        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
+//        cell.textLabel.textColor = [UIColor blackColor];
+//        cell.textLabel.highlightedTextColor = [UIColor lightGrayColor];
+//        cell.selectedBackgroundView = [[UIView alloc] init];
+//    
+//    NSArray *titles = @[@"项目1", @"项目2",@"项目3"];
+//    NSArray *images = @[@"icon-menu-progress", @"icon-menu-progress",@"icon-menu-progress"];
+//    cell.textLabel.text = titles[indexPath.row];
+//   cell.imageView.image = [UIImage imageNamed:images[indexPath.row]];
+
     
     return cell;
 }
