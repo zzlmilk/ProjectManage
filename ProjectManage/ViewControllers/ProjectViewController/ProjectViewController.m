@@ -7,7 +7,7 @@
 //
 
 #import "ProjectViewController.h"
-#import "TestTableViewCell.h"
+#import "ProjectDetailViewController.h"
 
 @interface ProjectViewController ()
 
@@ -39,7 +39,6 @@
     });
     
     [self.view addSubview:self.projectTableView];
-    
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
@@ -87,6 +86,14 @@
     }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+  ProjectDetailViewController *projectDetailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"projectDetailViewController"];
+    
+    [self.navigationController pushViewController: projectDetailVC animated:true];
+
 }
 
 
