@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProjectDetailViewController : UIViewController
+@interface ProjectDetailViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
-@property(nonatomic,strong) IBOutlet UIButton *addProjectBtn;
+
+@property(nonatomic,strong)IBOutlet UITableView *projectDetailTableView;
 
 @end

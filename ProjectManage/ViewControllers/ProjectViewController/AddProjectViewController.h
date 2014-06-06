@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddProjectViewController : UIViewController
+@interface AddProjectViewController : UIViewController<UITextViewDelegate>{
+
+    UITextField *dateTextField;
+    NSLocale *datelocale;
+    UIDatePicker *datePicker;
+    UITextView *jobContentField;
+    UIButton *clearTextBtn;
+}
+
+@property (nonatomic,strong) NSString *endTime;
+
+
 
 @end

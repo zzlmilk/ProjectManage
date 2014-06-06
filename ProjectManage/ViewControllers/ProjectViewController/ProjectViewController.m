@@ -31,6 +31,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor whiteColor]];
+    
     self.projectTableView = ({
         UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
         tableView.delegate = self;
@@ -39,7 +42,6 @@
     });
     
     [self.view addSubview:self.projectTableView];
-    
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
     
