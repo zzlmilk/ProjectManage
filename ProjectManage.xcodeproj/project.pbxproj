@@ -30,8 +30,13 @@
 		0460BA04193C5C5D00B6DE04 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0460BA03193C5C5D00B6DE04 /* FirstViewController.m */; };
 		DF98E2C3193F28F20067974B /* ProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF98E2C2193F28F20067974B /* ProjectDetailViewController.m */; };
 		DF98E2C6193F53D70067974B /* AddProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF98E2C5193F53D70067974B /* AddProjectViewController.m */; };
+		DF9933D4194548AC000DAAE3 /* Introduce.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9933D3194548AC000DAAE3 /* Introduce.m */; };
 		DFC365CD19406CC200736257 /* JobListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC365CC19406CC200736257 /* JobListViewController.m */; };
 		DFC365D019406E6C00736257 /* ChoosePeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC365CF19406E6C00736257 /* ChoosePeopleViewController.m */; };
+		DFC365D319418D5500736257 /* ContentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC365D219418D5500736257 /* ContentViewCell.m */; };
+		DFC365DC19419CE000736257 /* ContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC365DB19419CE000736257 /* ContentTableViewCell.m */; };
+		DFC365E01941A59A00736257 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC365DF1941A59A00736257 /* Task.m */; };
+		DFC365E31941A5D900736257 /* TaskList.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC365E21941A5D900736257 /* TaskList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,10 +87,20 @@
 		DF98E2C2193F28F20067974B /* ProjectDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailViewController.m; sourceTree = "<group>"; };
 		DF98E2C4193F53D70067974B /* AddProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProjectViewController.h; sourceTree = "<group>"; };
 		DF98E2C5193F53D70067974B /* AddProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProjectViewController.m; sourceTree = "<group>"; };
+		DF9933D2194548AC000DAAE3 /* Introduce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Introduce.h; sourceTree = "<group>"; };
+		DF9933D3194548AC000DAAE3 /* Introduce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Introduce.m; sourceTree = "<group>"; };
 		DFC365CB19406CC200736257 /* JobListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobListViewController.h; sourceTree = "<group>"; };
 		DFC365CC19406CC200736257 /* JobListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobListViewController.m; sourceTree = "<group>"; };
 		DFC365CE19406E6C00736257 /* ChoosePeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChoosePeopleViewController.h; path = ../../../../../Documents/ChoosePeopleViewController.h; sourceTree = "<group>"; };
 		DFC365CF19406E6C00736257 /* ChoosePeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChoosePeopleViewController.m; path = ../../../../../Documents/ChoosePeopleViewController.m; sourceTree = "<group>"; };
+		DFC365D119418D5500736257 /* ContentViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewCell.h; sourceTree = "<group>"; };
+		DFC365D219418D5500736257 /* ContentViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewCell.m; sourceTree = "<group>"; };
+		DFC365DA19419CE000736257 /* ContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTableViewCell.h; sourceTree = "<group>"; };
+		DFC365DB19419CE000736257 /* ContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTableViewCell.m; sourceTree = "<group>"; };
+		DFC365DE1941A59A00736257 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		DFC365DF1941A59A00736257 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		DFC365E11941A5D900736257 /* TaskList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskList.h; sourceTree = "<group>"; };
+		DFC365E21941A5D900736257 /* TaskList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +186,7 @@
 		0460B9C5193C5AD900B6DE04 /* ProjectManage */ = {
 			isa = PBXGroup;
 			children = (
+				DFC365DD1941A55D00736257 /* Models */,
 				DF98E2BD193F22350067974B /* Views */,
 				0460B9FB193C5B7A00B6DE04 /* ViewControllers */,
 				0460B9EE193C5B0700B6DE04 /* ThirdParty */,
@@ -251,8 +267,25 @@
 		DF98E2BD193F22350067974B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DFC365D119418D5500736257 /* ContentViewCell.h */,
+				DFC365D219418D5500736257 /* ContentViewCell.m */,
+				DFC365DA19419CE000736257 /* ContentTableViewCell.h */,
+				DFC365DB19419CE000736257 /* ContentTableViewCell.m */,
+				DF9933D2194548AC000DAAE3 /* Introduce.h */,
+				DF9933D3194548AC000DAAE3 /* Introduce.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DFC365DD1941A55D00736257 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DFC365DE1941A59A00736257 /* Task.h */,
+				DFC365DF1941A59A00736257 /* Task.m */,
+				DFC365E11941A5D900736257 /* TaskList.h */,
+				DFC365E21941A5D900736257 /* TaskList.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +390,8 @@
 				DF98E2C6193F53D70067974B /* AddProjectViewController.m in Sources */,
 				0460B9F7193C5B1600B6DE04 /* RESideMenu.m in Sources */,
 				0460B9D0193C5AD900B6DE04 /* AppDelegate.m in Sources */,
+				DFC365DC19419CE000736257 /* ContentTableViewCell.m in Sources */,
+				DFC365E31941A5D900736257 /* TaskList.m in Sources */,
 				0460B9FE193C5B8D00B6DE04 /* RootViewController.m in Sources */,
 				0460B9F8193C5B1600B6DE04 /* UIViewController+RESideMenu.m in Sources */,
 				04115669193F02140075F135 /* ProjectViewController.m in Sources */,
@@ -368,6 +403,9 @@
 				0460B9CC193C5AD900B6DE04 /* main.m in Sources */,
 				04115665193F015D0075F135 /* TimeLineViewController.m in Sources */,
 				0460BA04193C5C5D00B6DE04 /* FirstViewController.m in Sources */,
+				DF9933D4194548AC000DAAE3 /* Introduce.m in Sources */,
+				DFC365E01941A59A00736257 /* Task.m in Sources */,
+				DFC365D319418D5500736257 /* ContentViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

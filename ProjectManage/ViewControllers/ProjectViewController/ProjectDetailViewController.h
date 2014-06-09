@@ -13,4 +13,8 @@
 
 @property(nonatomic,strong)IBOutlet UITableView *projectDetailTableView;
 
+@property(nonatomic,strong) NSMutableArray *taskLists;
+
+
+
 @end

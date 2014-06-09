@@ -111,6 +111,7 @@
     UIButton *addJobBtn = [UIButton buttonWithType: UIButtonTypeCustom];
     [addJobBtn setFrame:CGRectMake((self.view.frame.size.width-280)/2, 320,280, 40)];
     [addJobBtn setTitle:@"添加任务" forState:UIControlStateNormal];
+    addJobBtn.titleLabel.font = [UIFont boldSystemFontOfSize:16.0f];
     [addJobBtn setBackgroundImage:[UIImage imageNamed:@"login-button"] forState:UIControlStateNormal];
     [addJobBtn setBackgroundImage:[UIImage imageNamed:@"login-button-highlighted"] forState:UIControlStateHighlighted];
     [addJobBtn.titleLabel setTextColor:[UIColor colorWithRed:250/255.f green:250/255.f blue:250/255.f alpha:1]];
@@ -122,9 +123,10 @@
     [dateTextField setBorderStyle:UITextBorderStyleNone];
     dateTextField.backgroundColor = [UIColor clearColor];
     //dateTextField.enabled = NO;
-    dateTextField.tintColor=[UIColor whiteColor];
     //dateTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     //dateTextField.text=@" 没有截止时间";
+    dateTextField.tintColor=[UIColor whiteColor];
+    dateTextField.delegate = self;
     dateTextField.placeholder = @" 没有截止时间";
     [dateTextField setValue:[UIColor colorWithRed:80/255.f green:80/255.f blue:80/255.f alpha:1] forKeyPath:@"_placeholderLabel.textColor"];
     dateTextField.textColor=[UIColor colorWithRed:80/255.f green:80/255.f blue:80/255.f alpha:1];
@@ -158,18 +160,16 @@
     [toolBar setItems:[NSArray arrayWithObjects:flexible,right,nil]  animated:YES];
     dateTextField.inputAccessoryView = toolBar;
     
-    
-    
 }
 
 -(BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSMutableString *text = [dateTextField.text mutableCopy];
     [text replaceCharactersInRange:range withString:string];
-    return [text length] <= 6;
+    return [text length] <1;
 }
 
--(void)clearTextContent{
 
+-(void)clearTextContent{
 
     clearTextBtn.hidden = YES;
     
